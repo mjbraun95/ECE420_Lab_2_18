@@ -56,7 +56,6 @@ void *Operate(void* rank) {
     /* If the client sent a read request */
     else if (request.is_read){
         getContent(buffer, request.pos, (char**)theArray); // defined in "common.h"
-        sprintf(buffer,"theArray[%d]: \"%s\"\n\n", request.pos, buffer); // display the result
         write(my_rank,buffer,sizeof(buffer));
     }
 
