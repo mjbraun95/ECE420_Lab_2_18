@@ -29,18 +29,6 @@ int thread_count;
 char **theArray; 
 pthread_mutex_t mutex;
 
-// void *ServerEcho(void *args)
-// {
-//     int clientFileDescriptor=(intptr_t)args;
-//     char str[20];
-
-//     read(clientFileDescriptor,str,20);
-//     printf("reading from client:%s\n",str);
-//     write(clientFileDescriptor,str,20);
-//     close(clientFileDescriptor);
-//     return NULL;
-// }
-
 /*-------------------------------------------------------------------*/
 void *Operate(void* rank) {
     long my_rank = (long) rank;
